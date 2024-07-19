@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://mivafi2mwfar"]
+
+[ext_resource type="PackedScene" uid="uid://ciy1ef43enhur" path="res://Objects/Rock_Default.tscn" id="1_qw4dx"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vxji0"]
+bounce = 15.0
+
+[node name="Rock_Bounce" instance=ExtResource("1_qw4dx")]
+physics_material_override = SubResource("PhysicsMaterial_vxji0")
+
+[node name="ColorRect" parent="CollisionShape2D" index="0"]
+color = Color(0.847474, 0.847474, 0.847474, 1)
