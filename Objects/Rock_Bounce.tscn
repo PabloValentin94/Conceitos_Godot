@@ -6,6 +6,7 @@
 bounce = 15.0
 
 [node name="Rock_Bounce" instance=ExtResource("1_qw4dx")]
+position = Vector2(50, 50)
 physics_material_override = SubResource("PhysicsMaterial_vxji0")
 
 [node name="ColorRect" parent="CollisionShape2D" index="0"]

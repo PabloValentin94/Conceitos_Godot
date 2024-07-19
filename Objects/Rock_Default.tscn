@@ -1,18 +1,18 @@
 [gd_scene load_steps=2 format=3 uid="uid://ciy1ef43enhur"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bto4x"]
-size = Vector2(64, 64)
+size = Vector2(50, 50)
 
 [node name="Rock_Default" type="RigidBody2D"]
-position = Vector2(48, 51)
+position = Vector2(50, 50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bto4x")
 
 [node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
-offset_left = -30.0
-offset_top = -30.0
-offset_right = 30.0
-offset_bottom = 30.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 color = Color(0.501961, 0.501961, 0.501961, 1)
 metadata/_edit_use_anchors_ = true

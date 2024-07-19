@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci8h8jv2b1wnx"]
+
+[ext_resource type="PackedScene" uid="uid://ciy1ef43enhur" path="res://Objects/Rock_Default.tscn" id="1_nas0e"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5nhmn"]
+friction = 0.0
+
+[node name="Rock_Friction" instance=ExtResource("1_nas0e")]
+physics_material_override = SubResource("PhysicsMaterial_5nhmn")
+
+[node name="ColorRect" parent="CollisionShape2D" index="0"]
+color = Color(1, 0.443684, 0.375095, 1)

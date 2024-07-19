@@ -1,5 +1,25 @@
 extends Node
 
+@export var templates: Array[PackedScene]
+
+func _ready() -> void:
+	
+	if templates.size() <= 0:
+		
+		templates.append(preload("res://Objects/Rock_Default.tscn"))
+	
+		templates.append(preload("res://Objects/Rock_Bounce.tscn"))
+		
+		templates.append(preload("res://Objects/Rock_Friction.tscn"))
+		
+		print("Carregamento de recursos feito através de código.\n")
+	
+	else:
+		
+		print("Carregamento de recursos feito através da interface do Godot.\n")
+	
+		pass
+
 func _input(event: InputEvent) -> void:
 	
 	# Verificando se é um evento de click do mouse.
@@ -14,4 +34,18 @@ func _input(event: InputEvent) -> void:
 			
 			if event.pressed:
 			
-				print(event)
+				print(event, "\n")
+				
+				spawn_box(event.position)
+
+func spawn_box(axis: Vector2) -> void:
+
+	var indice_template: int = randi_range(0, templates.size() - 1)
+	
+	var template = templates[indice_template]
+	
+	var objeto = template.instantiate()
+	
+	objeto.position = axis
+	
+	add_child(objeto)
